@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.codegym.custom_phone_validate");
+@ComponentScan("com.codegym.custom_phone_validate")
 public class AppConfigs implements WebMvcConfigurer, ApplicationContextAware {
 
     private ApplicationContext applicationContext;

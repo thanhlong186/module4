@@ -9,8 +9,7 @@
     <a th:href="@{/user/index}">Back to user list</a>
 </p>
 <h1>Create User</h1>
-<form th:action="@{/create}" th:object ="${userDto}" method="post" novalidate="novalidate">
-    <input type="hidden" th:field="*{id}"/>
+<form th:action="@{/user/create}" th:object ="${userDto}" method="post" novalidate="novalidate">
     <div>
         <span>Tên: </span>
         <td ><input type="text" th:field="*{firstName}"/></td>

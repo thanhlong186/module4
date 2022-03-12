@@ -8,6 +8,7 @@ import javax.validation.constraints.*;
 public class UserDto implements Validator {
 
     private Integer id;
+
     @NotBlank(message = "Vui long khong duoc de trong!")
     @Size(min=5, max=45, message = "vui long nhap so ki tu nhieu hon 5 va toi da la 45!")
     private String firstName;
