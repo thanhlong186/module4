@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+</head>
+<body>
+<h1>User List</h1>
+<p>
+    <a th:href="@{/user/create}">Add new User</a>
+</p>
+<a th:text="${message}"></a>
+<table border="1">
+    <thead>
+    <tr>
+        <td>Mã user</td>
+        <td>Tên</td>
+        <td>Họ</td>
+        <td>Số điện thoại</td>
+        <td>Tuổi</td>
+        <td>Email</td>
+<!--        <td>Chỉnh sửa</td>-->
+<!--        <td>Xóa</td>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${userDtos}">
+        <td th:text="${user.getId()}"></td>
+        <td><a th:href="@{user/view/__${user.getId()}__}" th:text="${user.getFirstName()}"></a></td>
+        <td th:text="${user.getLastName()}"></td>
+        <td th:text="${user.getPhoneNumber()}"></td>
+        <td th:text="${user.getAge()}"></td>
+        <td th:text="${user.getEmail()}"></td>
+<!--        <td><a th:href="@{user/edit/__${user.getId()}__}"></a>edit</td>-->
+<!--        <td><a th:href="@{user/delete/__${user.getId()}__}"></a>delete</td>-->
+        <td></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
