@@ -1,11 +1,13 @@
 package com.codegym.borrow_books.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Books {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "book_id")
     private Integer id;
     private String name;
     private String author; // tác giả
@@ -13,7 +15,8 @@ public class Books {
     private String releaseYear; // năm phát hành
     private Integer amount; //số lượng sách
 
-    @OneToMany(cascade = )
+    @OneToMany(mappedBy = "books", cascade = CascadeType.ALL )
+    private Set<CodeBook> codeBooks;
 
 
     public Books() {
@@ -65,5 +68,13 @@ public class Books {
 
     public void setReleaseYear(String releaseYear) {
         this.releaseYear = releaseYear;
+    }
+
+    public Set<CodeBook> getCodeBooks() {
+        return codeBooks;
+    }
+
+    public void setCodeBooks(Set<CodeBook> codeBooks) {
+        this.codeBooks = codeBooks;
     }
 }
