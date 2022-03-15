@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Create Book</h1>
+<p>
+    <a th:href="@{/book}">Back to book List</a>
+    <a th:href="@{message}"></a>
+</p>
+<form th:action="@{/create}" th:object="${book}" method="post" novalidate="novalidate">
+    <input type="hidden" th:field="*{id}"/>
+    <div>
+        <span>Tên sách</span>
+        <input type="text" th:field="*{name}"/>
+    </div>
+    <div>
+        <span>Tác giả</span>
+        <input type="text" th:field="*{author}"/>
+    </div><div>
+        <span>Nhà sản xuất</span>
+        <input type="text" th:field="*{manufacture}"/>
+    </div><div>
+        <span>Năm phát hành</span>
+        <input type="text" th:field="*{releaseYear}"/>
+    </div><div>
+        <span>Số lượng</span>
+        <input type="text" th:field="*{amount}"/>
+    </div>
+    <input type="submit" value="save"/>
+</form>
+</body>
+</html>

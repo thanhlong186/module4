@@ -7,7 +7,7 @@ public class CodeBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
+    private String code;
 
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "id")
@@ -24,12 +24,12 @@ public class CodeBook {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCode() {
+        return code;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Books getBooks() {

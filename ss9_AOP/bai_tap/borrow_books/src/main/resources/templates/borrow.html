@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrow</title>
+</head>
+<body>
+<h1>Mượn sách</h1>
+<p>
+  <a th:href="@{/book}">Quay lại trang chủ</a>
+</p>
+<p>
+  Mã mượn sách của bạn là:
+    <a th:text="${code}"></a>
+</p>
+</body>
+</html>

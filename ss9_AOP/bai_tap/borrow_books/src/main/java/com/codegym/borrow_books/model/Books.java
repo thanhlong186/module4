@@ -7,7 +7,6 @@ import java.util.Set;
 public class Books {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "book_id")
     private Integer id;
     private String name;
     private String author; // tác giả

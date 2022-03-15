@@ -1,4 +1,7 @@
 package com.codegym.borrow_books.repository;
 
-public interface IBookRepository {
+import com.codegym.borrow_books.model.Books;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IBookRepository extends JpaRepository<Books, Integer> {
 }
