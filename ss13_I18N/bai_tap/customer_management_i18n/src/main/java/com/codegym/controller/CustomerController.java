@@ -1,7 +1,7 @@
 package com.codegym.controller;
 
 import com.codegym.model.Customer;
-import com.codegym.repository.ICustomerRepository;
+import com.codegym.model.User;
 import com.codegym.service.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,9 +18,25 @@ public class CustomerController {
     @Autowired
     private ICustomerService customerService;
 
+    @GetMapping("/login")
+    public ModelAndView showLoginForm() {
+        ModelAndView modelAndView = new ModelAndView("login");
+        modelAndView.addObject("user", new User());
+        return modelAndView;
+    }
+    @PostMapping("/doLogin")
+    public ModelAndView doLogin(@ModelAttribute User user) {
+        if(user.getUsername().equals("admin") && user.getPassword().equals("123456")){
+            ModelAndView modelAndView = new ModelAndView("list");
+            modelAndView.addObject("user",user);
+            return modelAndView;
+        }
+        return new ModelAndView("error");
+    }
+
     @GetMapping("/create-customer")
         public ModelAndView showCreateForm() {
-        ModelAndView modelAndView = new ModelAndView("/customer/create");
+        ModelAndView modelAndView = new ModelAndView("create");
         modelAndView.addObject("customer", new Customer());
         return modelAndView;
     }
@@ -28,7 +44,7 @@ public class CustomerController {
     @PostMapping("/create-customer")
     public ModelAndView saveCustomer(@ModelAttribute("customer") Customer customer) {
         customerService.save(customer);
-        ModelAndView modelAndView = new ModelAndView("/customer/create");
+        ModelAndView modelAndView = new ModelAndView("create");
         modelAndView.addObject("customer", new Customer());
         modelAndView.addObject("message", "New customer created successfully");
         return modelAndView;
@@ -37,7 +53,7 @@ public class CustomerController {
     @GetMapping("/customers")
     public ModelAndView listCustomers() {
         List<Customer> customers = customerService.findAll();
-        ModelAndView modelAndView = new ModelAndView("/customer/list");
+        ModelAndView modelAndView = new ModelAndView("list");
         modelAndView.addObject("customers", customers);
         return modelAndView;
     }
@@ -46,12 +62,12 @@ public class CustomerController {
     public ModelAndView showEditForm(@PathVariable Long id) {
         Customer customer = customerService.findById(id);
         if (customer != null) {
-            ModelAndView modelAndView = new ModelAndView("/customer/edit");
+            ModelAndView modelAndView = new ModelAndView("edit");
             modelAndView.addObject("customer", customer);
             return modelAndView;
 
         } else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
+            ModelAndView modelAndView = new ModelAndView("error");
             return modelAndView;
         }
     }
@@ -59,7 +75,7 @@ public class CustomerController {
     @PostMapping("/edit-customer")
     public ModelAndView updateCustomer(@ModelAttribute("customer") Customer customer) {
         customerService.save(customer);
-        ModelAndView modelAndView = new ModelAndView("/customer/edit");
+        ModelAndView modelAndView = new ModelAndView("edit");
         modelAndView.addObject("customer", customer);
         modelAndView.addObject("message", "Customer updated successfully");
         return modelAndView;
@@ -69,12 +85,12 @@ public class CustomerController {
     public ModelAndView showDeleteForm(@PathVariable Long id) {
         Customer customer = customerService.findById(id);
         if (customer != null) {
-            ModelAndView modelAndView = new ModelAndView("/customer/delete");
+            ModelAndView modelAndView = new ModelAndView("delete");
             modelAndView.addObject("customer", customer);
             return modelAndView;
 
         } else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
+            ModelAndView modelAndView = new ModelAndView("error");
             return modelAndView;
         }
     }
