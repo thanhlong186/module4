@@ -5,68 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9608a21b-95e4-4569-bca1-0d34b9cad5ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/configs/AppConfigs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/thuc_hanh/use_spring_security/src/main/java/com/codegym/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/thuc_hanh/use_spring_security/src/main/java/com/codegym/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/thuc_hanh/use_spring_security/src/main/java/com/codegym/security/SecurityInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/thuc_hanh/use_spring_security/src/main/resources/templates/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/thuc_hanh/use_spring_security/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/thuc_hanh/use_spring_security/src/main/resources/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/security/SecurityConfigs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/security/SecurityInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/service/Impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/java/com/codegym/service/Impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/category/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/category/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/category/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/category/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/category/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog_new/src/main/resources/templates/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/customer-management.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/config/AppConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/config/AppInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/config/CharsetFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/repository/ICustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/repository/ICustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/repository/impl/CustomerRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/repository/impl/CustomerRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/IGeneralService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/IGeneralService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/impl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/customer-management-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/config/AppInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/config/CharsetFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/message_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/message_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/i18n/message_vi.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/i18n/message_vi.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/SpringSecurityBlogApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/controller/BlogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/controller/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/model/Blog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/repository/IBlogRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/repository/ICategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/security/SecurityConfigs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/security/SecurityInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/service/IBlogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/service/ICategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/service/Impl/BlogServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/java/com/codegym/service/Impl/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/category/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/category/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/category/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/category/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/category/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/main/resources/templates/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss14_spring_security/bai_tap/spring_security_blog/src/test/java/com/codegym/SpringSecurityBlogApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647675226560</updated>
       <workItem from="1647675227912" duration="2321000" />
+      <workItem from="1647829775279" duration="145000" />
     </task>
     <servers />
   </component>
