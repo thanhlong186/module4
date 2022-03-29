@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{/service/layout :: head}">
+
+    </th:block>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Tạo Mới Dịch Vụ</h1>
+<p>
+    <a th:href="@{/services/list}">Quay lại trang chủ</a>
+    <a th:text="${message}"></a>
+</p>
+
+<form th:action="@{/services/save}" th:object="${serviceDto}" method="post" novalidate="novalidate">
+    <div>
+        <span>Mã Dịch Vụ</span>
+        <input type="text" th:field="*{codeService}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('codeService')}" th:errors="*{codeService}"></p>
+    </div>
+    <div>
+    <span>Tên Dịch Vụ</span>
+        <select class="form-control" th:field="*{serviceName}">
+            <option  value="">Chọn...</option>
+            <option value="Villa" >Villa</option>
+            <option value="Room" >Room</option>
+            <option value="House" >House</option>
+        </select>
+        <p style="color: red" th:if="${#fields.hasErrors('serviceName')}" th:errors="*{serviceName}"></p>
+    </div>
+    <div>
+    <span>Diện Tích</span>
+        <input type="text" th:field="*{area}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></p>
+    </div>
+    <div>
+    <span>Chi Phí Dịch Vụ</span>
+    <input type="text" th:field="*{serviceCost}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('serviceCost')}" th:errors="*{serviceCost}"></p>
+    </div>
+    <div>
+    <span>Số Lượng Người Tối Đa</span>
+    <input type="text" th:field="*{serviceMaxPeople}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('serviceMaxPeople')}" th:errors="*{serviceMaxPeople}"></p>
+    </div>
+    <div>
+    <span>Mô Tả</span>
+    <input type="text" th:field="*{description}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
+    </div>
+    <div>
+    <span>Diện Tích Hồ Bơi</span>
+    <input type="text" th:field="*{poolArea}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('poolArea')}" th:errors="*{poolArea}"></p>
+    </div>
+    <div>
+    <span>Số Tầng</span>
+    <input type="text" th:field="*{numberOfFloors}"/>
+        <p style="color: red" th:if="${#fields.hasErrors('numberOfFloors')}" th:errors="*{numberOfFloors}"></p>
+    </div>
+    <div class="mx-auto" style="height: 50px">
+        <span>Loại Dịch Vụ</span>
+        <select th:field="*{serviceType}">
+            <option th:each="iteam : ${serviceType}"
+                    th:value="${iteam.id}" th:text="${iteam.getServiceTypeName()}"></option>
+        </select>
+    </div>
+    <div class="mx-auto" style="height: 50px">
+        <span>Kiểu Thuê</span>
+        <select th:field="*{rentType}">
+            <option th:each="iteam : ${rentType}"
+                    th:value="${iteam.getId()}" th:text="${iteam.getRentTypeName()}"></option>
+        </select>
+    </div>
+    <input type="submit" value="Lưu"/>
+
+</form>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

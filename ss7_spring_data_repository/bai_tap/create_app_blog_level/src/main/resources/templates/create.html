@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/layout :: head"></head>
+<head th:replace="/layout :: head">
     <meta charset="UTF-8">
     <title>Create Blog</title>
 </head>
@@ -36,8 +36,7 @@
         </select>
     </div>
     <input type="submit" value="save"/>
-</table>
-    <footer th:replace="/layout :: footer"></footer>
 </form>
+<footer th:replace="/layout :: footer"></footer>
 </body>
 </html>

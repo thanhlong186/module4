@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{/layout :: head}">
+
+    </th:block>
+    <meta charset="UTF-8">
+    <title>Tao moi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<p>
+    <a th:text="${message}"></a>
+</p>
+<form th:action="@{/home/save}" th:object="${transactionDto}" method="post" novalidate="novalidate">
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="text-center">Thêm Mới Giao Dịch</h2>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="codeCustomer">Mã Giao Dịch:</label>
+                <input type="text" class="form-control" id="codeCustomer" th:field="*{codeTransaction}">
+                <p style="color: red" th:if="${#fields.hasErrors('codeTransaction')}" th:errors="*{codeTransaction}"></p>
+            </div>
+            <div class="form-group">
+                <label for="name">Tên Khách Hàng:</label>
+                <select th:field="*{customer.id}" class="form-control" id="name" name="nameCustomer" required>
+                    <option  value="">Chọn khách hàng...</option>
+                    <option th:each="item : ${customer}"
+                            th:value="${item.id}" th:text="${item.name}"></option>
+<!--                <input required="true" type="text" class="form-control" id="name">-->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="day">Loại Bất Động Sản:</label>
+                <input type="radio" th:field="*{serviceType}" th:value="1" style="margin-left: 20px"/>Đất
+                <input type="radio" th:field="*{serviceType}" th:value="2" style="margin-left: 20px"/>Nhà Đất
+<!--                <p style="color: red" th:if="${#fields.hasErrors('serviceType')}" th:errors="*{serviceType}"></p>-->
+            </div>
+            <div class="form-group">
+                <label for="day">Ngày Giao dịch:</label>
+                <input type="date" class="form-control" id="day" th:field="*{date}">
+            </div>
+<!--            <div class="form-group">-->
+<!--                <label for="pwd">Password:</label>-->
+<!--                <input required="true" type="password" class="form-control" id="pwd">-->
+<!--            </div>-->
+            <div class="form-group">
+                <label for="price">Đơn Giá:</label>
+                <input  type="text" class="form-control" id="price" th:field="*{price}">
+                <p style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+            </div>
+            <div class="form-group">
+                <label for="area">Diện Tích:</label>
+                <input type="text" class="form-control" id="area" th:field="*{area}">
+                <p style="color: red" th:if="${#fields.hasErrors('area')}" th:errors="*{area}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<center>
+        <div>
+            <button type="submit" th:value="save" style="height: 50px; width: 50px; text-align: center" class="btn btn-info">Lưu</button>
+            <a style="height: 50px" th:href="@{/home/list}" class="btn btn-danger">Huỷ</a>
+        </div>
+</center>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
