@@ -1,6 +1,6 @@
 package com.codegym.service.Impl;
 
-import com.codegym.model.Customer;
+import com.codegym.model.ProductType;
 import com.codegym.repository.ICustomerRepository;
 import com.codegym.service.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +16,12 @@ public class CustomerServiceImpl implements ICustomerService {
     private ICustomerRepository customerRepository;
 
     @Override
-    public List<Customer> findAllCustomer() {
+    public List<ProductType> findAllCustomer() {
         return customerRepository.findAll();
     }
 
     @Override
-    public Page<Customer> findAllByCustomer(String name, Pageable pageable) {
+    public Page<ProductType> findAllByCustomer(String name, Pageable pageable) {
         return customerRepository.findAllByNameContaining(name, pageable);
     }
 }

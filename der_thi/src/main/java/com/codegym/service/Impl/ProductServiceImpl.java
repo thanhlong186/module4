@@ -1,6 +1,6 @@
 package com.codegym.service.Impl;
 
-import com.codegym.model.Transaction;
+import com.codegym.model.Product;
 import com.codegym.repository.ITransactionRepository;
 import com.codegym.service.ITransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,17 +15,17 @@ public class TransactionServiceImpl implements ITransactionService {
     private ITransactionRepository transactionRepository;
 
     @Override
-    public Page<Transaction> findAllTransaction(Pageable pageable) {
+    public Page<Product> findAllTransaction(Pageable pageable) {
         return transactionRepository.findAll(pageable);
     }
 
     @Override
-    public Transaction save(Transaction transaction) {
+    public Product save(Product transaction) {
         return transactionRepository.save(transaction);
     }
 
     @Override
-    public Transaction findById(Integer id) {
+    public Product findById(Integer id) {
         return transactionRepository.findById(id).get();
     }
 
@@ -37,7 +37,7 @@ public class TransactionServiceImpl implements ITransactionService {
 
     @Override
 
-    public Page<Transaction> findAllByCustomer_NameContaining(String name, Pageable pageable) {
+    public Page<Product> findAllByCustomer_NameContaining(String name, Pageable pageable) {
         return transactionRepository.findAllByCustomer_NameContaining(name, pageable);
     }
 //

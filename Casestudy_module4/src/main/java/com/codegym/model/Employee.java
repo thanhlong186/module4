@@ -25,9 +25,11 @@ public class Employee {
     @JsonManagedReference
     private Division division;
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "position_id",referencedColumnName = "id")
     private Position position;
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "education_id",referencedColumnName = "id")
     private EducationDegree education;
     @OneToMany(mappedBy = "employee")

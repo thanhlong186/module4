@@ -4,16 +4,17 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class ServiceType {
+public class ProductType {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 
-    @OneToMany(mappedBy = "serviceType")
-    private Set<Transaction> transactions;
+    @OneToMany(mappedBy = "productType")
+    private Set<Product> products;
 
-    public ServiceType() {
+    public ProductType() {
     }
 
     public Integer getId() {
@@ -32,11 +33,11 @@ public class ServiceType {
         this.name = name;
     }
 
-    public Set<Transaction> getTransactions() {
-        return transactions;
+    public Set<Product> getProducts() {
+        return products;
     }
 
-    public void setTransactions(Set<Transaction> transactions) {
-        this.transactions = transactions;
+    public void setProducts(Set<Product> products) {
+        this.products = products;
     }
 }

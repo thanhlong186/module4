@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DeThiCuoiModuleApplication {
+public class DeThiModuleApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DeThiCuoiModuleApplication.class, args);
+        SpringApplication.run(DeThiModuleApplication.class, args);
     }
 
 }

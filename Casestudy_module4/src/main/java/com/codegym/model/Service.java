@@ -15,6 +15,7 @@ public class Service {
     private String description;
     private Double poolArea;
     private Integer numberOfFloors;
+    private String img;
     @ManyToOne
     @JoinColumn(name = "serviceType_id", referencedColumnName = "id")
     private ServiceType serviceType;
@@ -115,5 +116,13 @@ public class Service {
 
     public void setRentType(RentType rentType) {
         this.rentType = rentType;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

@@ -1,6 +1,7 @@
 package com.codegym.model;
 
-import org.hibernate.annotations.CacheConcurrencyStrategy;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 
@@ -18,6 +19,7 @@ public class Customer {
     private String email;
     private String address;
 
+//    @JsonManagedReference
     @ManyToOne
     @JoinColumn(name = "customerType_id" , referencedColumnName = "id")
     private CustomerType customerType;

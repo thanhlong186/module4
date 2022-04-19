@@ -1,5 +1,6 @@
 package com.codegym.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -12,7 +13,7 @@ public class EducationDegree {
     private Integer id;
     private String educationName;
    @OneToMany(mappedBy = "education" )
-   @JsonManagedReference
+   @JsonBackReference
    private Set<Employee> employees;
 
     public EducationDegree() {

@@ -1,5 +1,6 @@
 package com.codegym.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -12,8 +13,8 @@ public class CustomerType {
     private Long id;
     private String customerTypeName;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "customerType", cascade = CascadeType.ALL)
-    @JsonManagedReference
     private Set<Customer> customers;
 
     public CustomerType() {
